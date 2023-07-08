@@ -10,7 +10,7 @@ import xlrd
 
 def checkWeather(adcode):
     request_url = "https://restapi.amap.com/v3/weather/weatherInfo?city=" + adcode + \
-                  "&key=2150dfb6e7d3dbbaf89c9df87998c829"
+                  "&key="
     response = requests.get(request_url)
     response.raise_for_status()  # 检查响应是否正常
     weather_data = response.json()
@@ -51,7 +51,7 @@ def gaode_getweather(city):
 
 def checkForeWeather(adcode):
     request_url = "https://restapi.amap.com/v3/weather/weatherInfo?city=" + adcode + \
-                  "&key=2150dfb6e7d3dbbaf89c9df87998c829&extensions=all"
+                  "&key=&extensions=all"
     response = requests.get(request_url)
     response.raise_for_status()  # 检查响应是否正常
     weather_data = response.json()
@@ -86,7 +86,7 @@ def gaode_getforeweather(city):
 
 def checkGeocode(geocity):
     request_url = "https://restapi.amap.com/v3/geocode/geo?address=" + geocity + \
-                  "&key=2150dfb6e7d3dbbaf89c9df87998c829"
+                  "&key="
     response = requests.get(request_url)
     response.raise_for_status()  # 检查响应是否正常
     Geo_data = response.json()
